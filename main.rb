@@ -52,7 +52,7 @@ tesla = Stock.new('Tesla', "TSLA")
 alibaba = Stock.new('Alibaba', "BABA")
 a_airlines = Stock.new('American Airlines', "AAL")
 nike = Stock.new('Nike', "NKE")
-j_j = Stock.new('Johnson & Johnson', "JNJ")
+brk = Stock.new('BERKSHIRE HATHAWAY', "BRK.A")
 
 # Add stocks to the user account
 account2.add_stock_to_portfolio(apple)
@@ -64,7 +64,7 @@ account2.add_stock_to_portfolio(tesla)
 account2.add_stock_to_portfolio(alibaba)
 account2.add_stock_to_portfolio(a_airlines)
 account2.add_stock_to_portfolio(nike)
-account2.add_stock_to_portfolio(j_j)
+account2.add_stock_to_portfolio(brk)
 
 # run the code 
 Methods.cash_deposit(account2)
