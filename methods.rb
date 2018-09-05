@@ -1,5 +1,6 @@
 module Methods
 
+    # This method prompts user to deposit to the account and update the account balance
     def self.cash_deposit account
         puts "Hello #{account.account_name}! Your current balance is $#{account.account_balance}"
         print "How much would you like to deposit? "
@@ -12,6 +13,7 @@ module Methods
         self.back_to_menu account
     end
 
+    # This methods brings users back to the main menu
     def self.back_to_menu account
         print "Press 'X' to go to Menu..."
         user_input = gets.strip.downcase
@@ -22,6 +24,7 @@ module Methods
             end
     end
 
+    # Display the menu
     def self.display_menu account
         puts """
         Menu
@@ -37,6 +40,7 @@ module Methods
         self.menu_selection account
     end
 
+    # This method prompts users to select a directory from the menu
     def self.menu_selection account
         print "Please select directory: "
         menu_selection = gets.strip.upcase
@@ -60,6 +64,7 @@ module Methods
         end
     end
 
+    # Display the user's saved watchlist 
     def self.my_watchlist account
         account.user_stocks.each_with_index do |name, index|
             require 'colorize'
@@ -82,6 +87,7 @@ module Methods
         self.back_to_menu account
     end
 
+    # Display the price of the stocks
     def self.display_price account
         puts "Stock Price"
         account.user_stocks.each_with_index do |name, index|
@@ -92,6 +98,7 @@ module Methods
         self.back_to_menu account
     end
 
+    # Display the PE ratio of the stocks
     def self.display_ratio account
         puts "PE Ratio"
         account.user_stocks.each_with_index do |name, index|
@@ -102,6 +109,7 @@ module Methods
         self.back_to_menu account
     end
 
+    # Display the percentage change of the stocks
     def self.display_percent account
         puts "Percentage Change"
         account.user_stocks.each_with_index do |name, index|
@@ -119,20 +127,20 @@ module Methods
         self.back_to_menu account
     end
 
+    # Prompt user to enter what stock(and how many shares) he would like to invest and add the stock to the cart 
     def self.invest account
         print "Which stock would you like to invest in (symbol): "
         order_stock = gets.strip.upcase
-        
         chosen_stock = account.user_stocks.find do |stock|
             stock.symbol == order_stock  
         end 
 
         print "Quantity of shares? "
         order_quantity = gets.strip.to_i
-        order_cost = (chosen_stock.price * order_quantity)
+        order_cost = (chosen_stock.price * order_quantity).round(2)
 
         if account.account_balance >= order_cost
-            account.account_balance = account.account_balance - order_cost
+            account.account_balance = (account.account_balance - order_cost).round(2)
             chosen_stock.quantity = order_quantity
             chosen_stock.subtotal_cost = order_cost
             account.cart << chosen_stock
@@ -156,6 +164,7 @@ module Methods
             end
     end
 
+    # Display the user's cart/summary
     def self.display_cart account
         account.cart.each_with_index do |stock, index|
         print "
@@ -165,7 +174,7 @@ module Methods
         "
         end
         puts "
-        Remaining account balance: $#{account.account_balance}
+        Your remaining balance: $#{account.account_balance}
         "
         self.back_to_menu account
     end
