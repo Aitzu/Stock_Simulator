@@ -1,7 +1,7 @@
 # Terminal Project - Stock buying Simulator Aitzu & Ben
 
 
-[github](https://github.com)
+[github](https://github.com/Aitzu/Stock_Simulator)
 
 gems needed: 
 
@@ -61,32 +61,32 @@ A real time share buying simulator using the stock_quote ruby gem to bring up cu
 - we created an User and Stock class to keep all the information reguarding these 2 main attributes of our app in one place that was easy to access throughout the use of the app. 
 
 ## Screenshots
-![app-screenshot](app-screenshot.png)
+![app-screenshot](/src/docs/app-screenshot.png)
 
-![app-screenshot2](app-screenshot2.png)
+![app-screenshot2](/src/docs/app-screenshot2.png)
 
-![app-screenshot3](app-screenshot3.png)
+![app-screenshot3](/src/docs/app-screenshot3.png)
 
 ## Slack talks
 
-![slack1.png](slack1.png)
+![slack1.png](/src/docs/slack1.png)
 
-![slack2.png](slack2.png)
+![slack2.png](/src/docs/slack2.png)
 
-![slack3.png](slack3.png)
+![slack3.png](/src/docs/slack3.png)
 
 ## Brainstorming / Development notes
 
-![firstdraft.png](firstdraft.png)
+![firstdraft.png](/src/docs/firstdraft.png)
 
-![progress.jpg](progress.jpg)
+![progress.jpg](/src/docs/progress.jpg)
 
-![progress2.jpg](progress2.jpg)
+![progress2.jpg](/src/docs/progress2.jpg)
 
-![progress3.jpg](progress3.jpg)
+![progress3.jpg](/src/docs/progress3.jpg)
 
 ## Trello
 
-![Trello.png](Trello.png)
+![Trello.png](/src/docs/Trello.png)
 
-![Trello.png](Trello2.png)
+![Trello.png](/src/docs/Trello2.png)
